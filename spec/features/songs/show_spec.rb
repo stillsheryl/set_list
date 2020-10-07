@@ -20,7 +20,7 @@ describe "As a user" do
                            play_count:  453254)
 
       visit "/songs/#{song_1.id}"
-      expect(page).to have_link("back to index")
+      expect(page).to have_link("Back to Songs")
     end
 
   end

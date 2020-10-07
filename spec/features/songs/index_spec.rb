@@ -11,7 +11,6 @@ describe "As a user" do
                            play_count:  1214722172)
 
       visit '/songs'
-      save_and_open_page
       expect(page).to have_content("Song List")
       expect(page).to have_content("#{song_1.title}")
       expect(page).to have_content("#{song_2.title}")
