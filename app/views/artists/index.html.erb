@@ -4,4 +4,5 @@
 
 <p><% @artists.each do |artist| %></p>
   <p><%= artist.name %></p>
+  <%= button_to 'Delete', "/artists/#{artist.id}", method: :delete %>
 <% end %>

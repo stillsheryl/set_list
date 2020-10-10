@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "As a Visitor" do
-  it "I can delete an artist" do
-    talking_heads = Artist.create!(name: 'Talking Heads')
+describe 'As a Visitor' do
+  it 'I can delete an artist' do
+    talking_heads = Artist.create(name: 'Talking Heads')
 
     visit '/artists'
 
