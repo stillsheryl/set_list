@@ -1,0 +1,9 @@
+<%= form_tag("/artists/#{@artist_id}/songs", method: :post) do %>
+  <%= label_tag :title, 'Title' %><br>
+  <%= text_field_tag :title %><br>
+  <%= label_tag :length, 'Length' %><br>
+  <%= text_field_tag :length %><br>
+  <%= label_tag :play_count, 'Play count' %><br>
+  <%= text_field_tag :play_count %><br><br>
+  <%= submit_tag 'Create Song' %>
+<% end %>

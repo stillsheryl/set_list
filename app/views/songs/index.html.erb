@@ -1,6 +1,8 @@
-<h1>Song List</h1>
+<h1 id="header-song">Song List</h1>
 
 <% @songs.each do |song| %>
+<section id="song-<%= song.id %>", class="songs">
   <h2><%= song.title %></h2>
   <p>Play Count: <%= song.play_count %></p>
+</section>
 <% end %>
