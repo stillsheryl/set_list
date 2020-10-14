@@ -15,7 +15,7 @@ class SongsController < ApplicationController
   def create
     artist = Artist.find(params[:artist_id])
     song = artist.songs.create!(song_params)
-    redirect_to "/songs/#{song.id}}"
+    redirect_to "/songs/#{song.id}"
   end
 
   private
