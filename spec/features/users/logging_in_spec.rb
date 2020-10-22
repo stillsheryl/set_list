@@ -33,6 +33,8 @@ RSpec.describe "Logging In" do
     fill_in :username, with: user.username
     fill_in :password, with: "incorrect password"
 
+    click_on "Log In"
+
     expect(current_path).to eq('/login')
 
     expect(page).to have_content("Sorry, your credentials are bad.")
