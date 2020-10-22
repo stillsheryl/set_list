@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index' #can also use root "welcome#index"
   get '/users/new', to: 'users#new'
   post 'users', to: 'users#create'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
   get 'profile', to: 'users#show'
   get '/songs', to: 'songs#index'
   get '/songs/:id', to: 'songs#show'
