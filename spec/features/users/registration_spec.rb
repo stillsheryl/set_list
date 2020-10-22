@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "User registration form" do
   it "creates new user" do
-    visit '/'
+    visit "/"
 
     click_on "Register as a User"
 
     expect(current_path).to eq("/users/new")
 
-    unsername = "funbucket13"
+    username = "funbucket13"
     password = "test"
 
     fill_in :username, with: username
