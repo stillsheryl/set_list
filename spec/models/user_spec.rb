@@ -9,11 +9,11 @@ describe User, type: :model do
 
   describe "roles" do
     it "can be created as an admin" do
-      admin = User.create!(username: "Penelope",
+      user = User.create!(username: "Penelope",
                           password: "boom",
                           role: 1)
 
-      expect (user.role).to eq("admin")
+      expect(user.role).to eq("admin")
       expect(user.admin?).to be_truthy
     end
 
