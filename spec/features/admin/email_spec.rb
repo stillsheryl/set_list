@@ -14,3 +14,18 @@ describe "Admin can email users" do
     end
   end
 end
+
+describe "as a default user" do
+  it "does not allow defauly user to see admin dashboard index" do
+    user = User.create(username: "fern@gully.com",
+                     password: "password",
+                     role: 0)
+
+    allow_any_instance_of(ApplicationController). to receive(:current_user).and_return(user)
+
+    visit '/admin/dashboard'
+
+    expect(page).to_not have_link("Email a User")
+    expect(page).to have_content("The page you were looking for doesn't exist.")
+    end
+end
