@@ -17,7 +17,8 @@ RSpec.describe "Logging Out" do
 
     click_on "Log out"
 
-    expect(current_path).to eq('/login')
-    expect(page).to have_link("Log In")
+    expect(current_path).to eq('/')
+    expect(page).to have_link("Register as a User")
+    expect(page).to have_link("I already have an account")
   end
 end
