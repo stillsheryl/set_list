@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = current_user #DRY and more secure
     # @user = User.find(session[:user_id])
   end
 
