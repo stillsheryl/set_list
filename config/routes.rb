@@ -21,4 +21,8 @@ Rails.application.routes.draw do
   post '/artists/:artist_id/songs', to: 'songs#create'
 
   get 'playlists', to: 'playlists#index'
+
+  namespace :admin do
+    get '/dashboard', to: 'dashboard#index'
+  end
 end

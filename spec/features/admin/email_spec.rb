@@ -10,7 +10,7 @@ describe "Admin can email users" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
       visit '/admin/dashboard'
-      expect(page).to have_link("Email a user")
+      expect(page).to have_link("Email a User")
     end
   end
 end
